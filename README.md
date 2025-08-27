@@ -6,6 +6,58 @@ This project provides an end-to-end solution for extracting, analyzing, and visu
 The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for medical entities**, and **interactive visualization** to make medical data analysis easy and efficient.
 
 ---
+## Approach Taken
+
+1. **Text Extraction**
+
+   * Extracted text from PDFs using `pdfplumber` and `pytesseract` (OCR).
+
+2. **Preprocessing**
+
+   * Cleaned the text with using regex rules to fix formats and remove noise.
+
+3. **Information Extraction**
+
+   * **Patient Names** → Identified with spaCy’s `en_core_web_sm` model.
+   * **Medical Diagnoses** → Extracted using spaCy’s `en_ner_bc5cdr_md` biomedical NER model, added list of medical terms and keywords.
+   * **Other Columns** → Extracted using regex patterns.
+
+4. **Data Storage**
+
+   * Designed a function to save structured results into CSV format.
+
+5. **Code Structure**
+
+   * Refactored exploratory notebook code into a modular Python package for better maintainability.
+
+6. **Streamlit Application**
+
+   * **Page 1** → Data extraction & download
+   * **Page 2** → Accuracy evaluation
+   * **Page 3** → Data visualization
+
+7. **Visualization**
+
+   * Generated charts and graphs to provide insights into the extracted medical information.
+
+--
+
+## Challenges Faced
+
+1.	**Mix-ups in Entity Detection**
+
+    * The NLP models sometimes confused hospital names with patient names, which messed up the structured output.
+
+2.	**Keeping Data Safe and Accurate**
+
+    * Since the text contains medical details , needed to make sure that no information was changed when processing large files Keeping names, diseases, and results aligned was very important.
+
+3.	**Gaps in Medical Coverage**
+
+    * The medical NLP model used didn’t recognize every diagnosis. To fill these gaps, added lists of medical terms and keywords.
+
+---
+
 
 ## Features
 
@@ -54,6 +106,7 @@ pip install -r requirements.txt
 4.Run the Streamlit app.
 
 ## Folder Structure
+
 Medical_Report_Data_Extraction_Project/
 │
 ├── medical_extraction/         # Core modules
@@ -71,4 +124,5 @@ Medical_Report_Data_Extraction_Project/
 ├── med_app.py                  # Main Streamlit app
 ├── requirements.txt
 └── README.md
+
 
