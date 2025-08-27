@@ -1,4 +1,3 @@
-#1_Extraction.py
 import streamlit as st
 from pathlib import Path
 import os
@@ -6,7 +5,7 @@ import io
 
 from medical_extraction.pdf_utils import extract_text_from_pdfs
 from medical_extraction.extract_info import extract_medical_info
-from medical_extraction.save_to_csv import save_medical_info_one_row_per_patient
+from medical_extraction.save_to_csv import save_medical_info
 # from medical_extraction.preprocessing import preprocess_text
 
 st.title("📄 Extraction Page")

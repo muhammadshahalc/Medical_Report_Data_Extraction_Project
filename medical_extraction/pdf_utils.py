@@ -1,4 +1,3 @@
-#pdf_utils.py
 import pdfplumber
 import pytesseract
 from typing import List, Dict

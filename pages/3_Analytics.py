@@ -13,7 +13,7 @@ st.write(
     """
 )
 
-# -------------------- Upload CSV --------------------
+# Upload CSV 
 uploaded_csv = st.file_uploader("Upload Extracted Medical CSV", type=["csv"])
 
 if uploaded_csv:
@@ -22,13 +22,13 @@ if uploaded_csv:
     # Convert Report Date to datetime
     df['Report Date'] = pd.to_datetime(df['Report Date'], dayfirst=True, errors='coerce')
 
-    # -------------------- Field Completeness --------------------
+    # Field Completeness
     st.subheader("📌 Field Completeness")
     missing_counts = df.isna().sum()
     st.bar_chart(missing_counts)
     st.write("Missing fields per column:", missing_counts)
 
-    # -------------------- Filters --------------------
+    # Filters
     st.sidebar.header("Filters")
     genders = df['Gender'].dropna().unique().tolist()
     selected_gender = st.sidebar.multiselect("Select Gender", options=genders, default=genders)
@@ -43,7 +43,7 @@ if uploaded_csv:
         df['Age'].between(selected_age[0], selected_age[1])
     ]
 
-    # -------------------- Test Frequency --------------------
+    # Test Frequency
     st.subheader("🧪 Test Frequency")
     all_tests = []
     for tests in filtered_df['Tests'].dropna():
@@ -60,7 +60,7 @@ if uploaded_csv:
     )
     st.altair_chart(test_chart.properties(height=400), use_container_width=True)
 
-    # -------------------- Diagnosis Frequency --------------------
+    # Diagnosis Frequency 
     st.subheader("💉 Diagnosis Frequency")
     all_diag = []
     for diag in filtered_df['Diagnosis'].dropna():
@@ -76,7 +76,7 @@ if uploaded_csv:
     )
     st.altair_chart(diag_chart.properties(height=400), use_container_width=True)
 
-    # -------------------- Gender Distribution --------------------
+    # Gender Distribution 
     st.subheader("👥 Gender Distribution")
     gender_chart = alt.Chart(filtered_df).mark_bar().encode(
         x='Gender',
@@ -85,7 +85,7 @@ if uploaded_csv:
     )
     st.altair_chart(gender_chart, use_container_width=True)
 
-    # -------------------- Age Distribution --------------------
+    # Age Distribution 
     st.subheader("📈 Age Distribution")
     age_chart = alt.Chart(filtered_df).mark_bar().encode(
         x='Age',
@@ -94,7 +94,7 @@ if uploaded_csv:
     )
     st.altair_chart(age_chart, use_container_width=True)
 
-    # -------------------- Report Timeline --------------------
+    # Report Timeline 
     st.subheader("🗓️ Reports Over Time")
     timeline_chart = alt.Chart(filtered_df).mark_line(point=True, color="#4e79a7").encode(
         x='Report Date',
@@ -103,6 +103,6 @@ if uploaded_csv:
     )
     st.altair_chart(timeline_chart.properties(height=300), use_container_width=True)
 
-    # -------------------- Preview Filtered Data --------------------
+    # Preview Filtered Data
     st.subheader("📝 Filtered Data Preview")
     st.dataframe(filtered_df)

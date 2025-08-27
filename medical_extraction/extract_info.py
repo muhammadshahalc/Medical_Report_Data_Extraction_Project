@@ -1,14 +1,13 @@
-#extract_info.py
 import re
 from typing import List, Dict, Union
 import spacy
-from .preprocessing import preprocess_text  # <-- relative import fixed
+from .preprocessing import preprocess_text  
 
 # Load spaCy models
 nlp_general = spacy.load("en_core_web_sm")   # For general entities
 nlp_medical = spacy.load("en_ner_bc5cdr_md") # For medical entities
 
-# ------------------- Patient Info -------------------
+# Patient Info
 def extract_patient_info(text: str) -> Dict[str, str]:
     info = {}
     name_match = re.search(r"(?:Patient Name|Name)[:\s]+([A-Za-z\s]+?)(?=\n|Age|$)", text, re.IGNORECASE)
@@ -27,7 +26,7 @@ def extract_patient_info(text: str) -> Dict[str, str]:
 
     return info
 
-# ------------------- Tests -------------------
+# Tests
 def extract_tests(text: str) -> List[Dict[str, str]]:
     tests = []
     test_list = [
@@ -57,7 +56,7 @@ def extract_tests(text: str) -> List[Dict[str, str]]:
     
     return tests
 
-# ------------------- Diagnosis -------------------
+# Diagnosis 
 def extract_diagnosis(text: str) -> List[str]:
     diagnoses = []
 
@@ -82,7 +81,7 @@ def extract_diagnosis(text: str) -> List[str]:
 
     return list(set(diagnoses))
 
-# ------------------- Combine -------------------
+# Combine
 def extract_medical_info(text: str) -> List[Dict[str, Union[str,List[Dict[str,str]],List[str]]]]:
     clean_text = preprocess_text(text)
     patient_info = extract_patient_info(clean_text)

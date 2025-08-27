@@ -1,8 +1,7 @@
-#save_to_csv.py
 import pandas as pd
 from typing import Dict, List, Union
 
-def save_medical_info_one_row_per_patient(all_results: Dict[str, List[Dict[str, Union[str,List[Dict[str,str]],List[str]]]]], output_csv: str):
+def save_medical_info(all_results: Dict[str, List[Dict[str, Union[str,List[Dict[str,str]],List[str]]]]], output_csv: str):
     rows = []
     for file_path, reports in all_results.items():
         for report in reports:
