@@ -65,7 +65,8 @@ Medical_Report_Data_Extraction_Project/
 │
 ├── pages/                      # Streamlit multi-page app
 │   ├── 1_Extraction.py
-│   └── 2_Accuracy.py
+│   ├── 2_Accuracy.py
+│   └── 3_Analytics.py
 │
 ├── med_app.py                  # Main Streamlit app
 ├── requirements.txt
