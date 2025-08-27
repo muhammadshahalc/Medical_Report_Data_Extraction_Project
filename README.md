@@ -94,6 +94,18 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
 }
 
 
+File	Patient Name	Age	Gender	Report Date	Tests	Diagnosis
+report_1.pdf	John Doe	45	Male	15/08/2025	Blood Test: Normal ECG; X-ray: Detected; MRI: Detected; blood test: Detected; ECG: Detected	anemia, hypertension, Hypertension
+report_2.pdf	Sarah Lee	32	Female	20-08-2025	mIU/L Ultrasound Abdomen: Normal; ultrasound: Detected; thyroid function test: Detected	Diabetes Mellitus, hypothyroidism, diabetes
+report_3.pdf	Michael Smith	60	Male	10/8/2025	Elevated WBC ECG: Normal; CT scan: Detected; blood test: Detected; ECG: Detected	pneumonia, Pneumonia
+report_4.pdf	Priya Kumar	28	Female	18/08/2025	Ultrasound Pelvis: Normal Pap; Smear: Negative Blood; ultrasound: Detected; blood test: Detected; Pap smear: Detected	
+report_5.pdf	Ahmed Ali	55	Male	22/08/2025	CT scan: Detected; liver function test: Detected; kidney function test: Detected	Fatty Liver, hypertension, Hypertension
+report_6.pdf	Emily Davis	40	Female	19/08/2025	X-ray Spine: Normal Blood; Test: Normal; X-ray: Detected; MRI: Detected; blood test: Detected	Lower back pain
+
+
+
+
+
 ## Features
 
 ### 1. Extraction
