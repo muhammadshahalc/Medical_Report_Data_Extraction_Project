@@ -5,6 +5,7 @@ This project provides an end-to-end solution for extracting, analyzing, and visu
 
 The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for medical entities**, and **interactive visualization** to make medical data analysis easy and efficient.
 
+[📂 View Working Demo Video](data/demo.mp4)
 ---
 ## Approach Taken
 
