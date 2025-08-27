@@ -23,7 +23,7 @@ Thumbs.db
 *.log
 temp_uploads/
 *.csv
-
+.env
 # Python packaging
 *.egg
 *.egg-info/

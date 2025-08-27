@@ -57,6 +57,41 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
     * The medical NLP model used didn’t recognize every diagnosis. To fill these gaps, added lists of medical terms and keywords.
 
 ---
+## Sample Structured Output
+
+{
+  "C:\\Users\\pessh\\Desktop\\Medical Report Data Extraction\\Med_a\\data\\samples\\report_1.pdf": [
+    {
+      "Patient Name": "John Doe",
+      "Age": "45",
+      "Gender": "Male",
+      "Report Date": "15/08/2025",
+      "Tests": [
+        {"Test": "Blood Test", "Value": "Normal", "Unit": "ECG"},
+        {"Test": "X-ray", "Value": "Detected", "Unit": ""},
+        {"Test": "MRI", "Value": "Detected", "Unit": ""},
+        {"Test": "blood test", "Value": "Detected", "Unit": ""},
+        {"Test": "ECG", "Value": "Detected", "Unit": ""}
+      ],
+      "Diagnosis": ["Hypertension", "Anemia", "Hypertension"]
+    }
+  ],
+
+  "C:\\Users\\pessh\\Desktop\\Medical Report Data Extraction\\Med_a\\data\\samples\\report_2.pdf": [
+    {
+      "Patient Name": "Sarah Lee",
+      "Age": "32",
+      "Gender": "Female",
+      "Report Date": "20-08-2025",
+      "Tests": [
+        {"Test": "mIU/L Ultrasound Abdomen", "Value": "Normal", "Unit": ""},
+        {"Test": "Ultrasound", "Value": "Detected", "Unit": ""},
+        {"Test": "Thyroid Function Test", "Value": "Detected", "Unit": ""}
+      ],
+      "Diagnosis": ["Diabetes", "Hypothyroidism", "Diabetes Mellitus"]
+    }
+  ]
+}
 
 
 ## Features
@@ -76,6 +111,36 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
 - Interactive **charts and dashboards** for insights.
 - Analyze **test and diagnosis frequency**, **gender and age distribution**, and **report timelines**.
 - Supports **Altair** and **Plotly** visualizations.
+
+
+### 4. Remedies Recommendations
+
+* Powered by **Groq API (LLaMA 3)** for smart and fast suggestions.
+* Generate **personalized remedies** and lifestyle tips based on diagnosis.
+* Export remedies to **CSV** for easy sharing and tracking.
+
+---
+
+Want me to also tweak your **Data Visualization** section to mention Groq (if it’s being used there too), so everything looks consistent in the README?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -119,7 +184,8 @@ Medical_Report_Data_Extraction_Project/
 ├── pages/                      # Streamlit multi-page app
 │   ├── 1_Extraction.py
 │   ├── 2_Accuracy.py
-│   └── 3_Analytics.py
+│   ├── 3_Analytics.py
+│   └── 4_Remedies.py
 │
 ├── med_app.py                  # Main Streamlit app
 ├── requirements.txt
