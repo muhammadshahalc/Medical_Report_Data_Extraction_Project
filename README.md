@@ -57,7 +57,7 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
     * The medical NLP model used didn’t recognize every diagnosis. To fill these gaps, added lists of medical terms and keywords.
 
 ---
-## Sample Structured Output
+## Sample JSON Structured Output
 
 {
   "C:\\Users\\pessh\\Desktop\\Medical Report Data Extraction\\Med_a\\data\\samples\\report_1.pdf": [
@@ -93,19 +93,11 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
   ]
 }
 
+## Sample CSV Structured Output
 
-File,Patient Name,Age,Gender,Report Date,Tests,Diagnosis
-report_1.pdf,John Doe,45,Male,2025-08-15,"Blood Test: Normal; ECG: Detected; X-ray: Detected; MRI: Detected","Anemia, Hypertension"
-report_2.pdf,Sarah Lee,32,Female,2025-08-20,"Ultrasound Abdomen: Normal; Ultrasound: Detected; Thyroid Function Test: Detected","Diabetes Mellitus, Hypothyroidism"
-report_3.pdf,Michael Smith,60,Male,2025-08-10,"ECG: Normal; CT Scan: Detected; Blood Test: Detected","Pneumonia"
-report_4.pdf,Priya Kumar,28,Female,2025-08-18,"Ultrasound Pelvis: Normal; Pap Smear: Negative; Blood Test: Detected","None"
-report_5.pdf,Ahmed Ali,55,Male,2025-08-22,"CT Scan: Detected; Liver Function Test: Detected; Kidney Function Test: Detected","Fatty Liver, Hypertension"
-report_6.pdf,Emily Davis,40,Female,2025-08-19,"X-ray Spine: Normal; Blood Test: Normal; X-ray: Detected; MRI: Detected","Lower Back Pain"
+[📂 View full dataset](data/patients.csv)
 
-
-
-
-
+---
 
 ## Features
 
@@ -131,29 +123,6 @@ report_6.pdf,Emily Davis,40,Female,2025-08-19,"X-ray Spine: Normal; Blood Test: 
 * Powered by **Groq API (LLaMA 3)** for smart and fast suggestions.
 * Generate **personalized remedies** and lifestyle tips based on diagnosis.
 * Export remedies to **CSV** for easy sharing and tracking.
-
----
-
-Want me to also tweak your **Data Visualization** section to mention Groq (if it’s being used there too), so everything looks consistent in the README?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 
@@ -187,14 +156,14 @@ pip install -r requirements.txt
 
 Medical_Report_Data_Extraction_Project/
 │
-├── medical_extraction/         # Core modules
+├── medical_extraction/         
 │   ├── __init__.py
 │   ├── pdf_utils.py
 │   ├── preprocessing.py
 │   ├── extract_info.py
 │   └── save_to_csv.py
 │
-├── pages/                      # Streamlit multi-page app
+├── pages/                      
 │   ├── 1_Extraction.py
 │   ├── 2_Accuracy.py
 │   ├── 3_Analytics.py
