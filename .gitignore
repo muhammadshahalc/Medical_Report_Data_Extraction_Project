@@ -22,7 +22,6 @@ Thumbs.db
 # Logs and temp files
 *.log
 temp_uploads/
-*.csv
 .env
 # Python packaging
 *.egg

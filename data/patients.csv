@@ -1,0 +1,11 @@
+File,Patient Name,Age,Gender,Report Date,Tests,Diagnosis
+report_1.pdf,John Doe,45,Male,15/08/2025,Blood Test: Normal ECG; X-ray: Detected; MRI: Detected; blood test: Detected; ECG: Detected,"anemia, hypertension, Hypertension"
+report_2.pdf,Sarah Lee,32,Female,20-08-2025,mIU/L Ultrasound Abdomen: Normal; ultrasound: Detected; thyroid function test: Detected,"Diabetes Mellitus, diabetes, hypothyroidism"
+report_3.pdf,Michael Smith,60,Male,10/8/2025,Elevated WBC ECG: Normal; CT scan: Detected; blood test: Detected; ECG: Detected,"Pneumonia, pneumonia"
+report_4.pdf,Priya Kumar,28,Female,18/08/2025,Ultrasound Pelvis: Normal Pap; Smear: Negative Blood; ultrasound: Detected; blood test: Detected; Pap smear: Detected,
+report_5.pdf,Ahmed Ali,55,Male,22/08/2025,CT scan: Detected; liver function test: Detected; kidney function test: Detected,"hypertension, Fatty Liver, Hypertension"
+report_6.pdf,Emily Davis,40,Female,19/08/2025,X-ray Spine: Normal Blood; Test: Normal; X-ray: Detected; MRI: Detected; blood test: Detected,Lower back pain
+report_7.pdf,Rajesh Nair,50,Male,17/08/2025,ECG: Abnormal Stress; Test: Positive Echocardiogram; blood test: Detected; ECG: Detected; echocardiogram: Detected; stress test: Detected,"coronary artery disease, Coronary Artery Disease"
+report_8.pdf,Ananya Singh,35,Female,21/08/2025,Blood Sugar Fasting: 110 mg/dL; c: 6.8 %; mg/dL Ultrasound Abdomen: Normal; ultrasound: Detected; lipid panel: Detected,Hyperlipidemia
+report_9.pdf,Robert Brown,65,Male,16/08/2025,Mild fibrosis Blood Test: Normal; X-ray: Detected; blood test: Detected; pulmonary function test: Detected,COPD
+report_10.pdf,Fatima Zahra,30,Female,23/08/2025,Pregnancy Test: Positive Ultrasound; Single intrauterine pregnancy Blood Test: Normal; ultrasound: Detected; blood test: Detected; pregnancy test: Detected,Early Pregnancy
