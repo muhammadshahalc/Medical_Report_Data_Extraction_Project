@@ -24,9 +24,9 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
     if "Diagnosis" not in df.columns or "Patient Name" not in df.columns:
-        st.error("❌ The file must contain both 'Diagnosis' and 'Patient Name' columns.")
+        st.error("The file must contain both 'Diagnosis' and 'Patient Name' columns.")
     else:
-        st.success("✅ File uploaded successfully!")
+        st.success("File uploaded successfully!")
         st.dataframe(df.head())
 
         # Strict system-style prompt

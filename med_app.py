@@ -9,5 +9,6 @@ st.write(
     1. **Extraction** – Extract patient info, tests, and diagnosis from PDFs.
     2. **Accuracy Checker** – Compare extracted data with ground truth CSV.
     3. **Data Visualization** – Explore report trends, test frequency, and diagnosis distribution.
+    4. **Remedies Recommendation** – Get AI-based remedies suggestions using Groq LLaMA-3.  
     """
 )
