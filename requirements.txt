@@ -1,21 +1,48 @@
-streamlit>=1.25.0
-pandas>=2.1.0
-python-dotenv>=1.0.0
-spacy==3.7.4  #works with Python 3.12
-scikit-learn>=1.3.0
-pdfplumber>=0.10.0
-pytesseract>=0.3.10
-Pillow>=10.0.0
-PyMuPDF>=1.23.0
-langchain-groq>=0.0.1
-altair>=5.0.0
-plotly>=6.0.0
+# Core app framework
+streamlit==1.37.1
 
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz
-https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+# Data processing
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.16.1
+scikit-learn==1.5.1
 
-blis>=0.7.10
-thinc>=8.1.12
-cython>=0.29.36
-numpy>=1.24.0
-scispacy==0.5.4  # For the medical NER model
+# NLP and spaCy ecosystem
+spacy==3.7.5
+scispacy==0.5.5
+blis==0.7.11 --only-binary :all:
+thinc==8.2.5
+srsly==2.5.1
+cymem==2.0.11
+preshed==3.0.10
+murmurhash==1.0.13
+catalogue==2.0.10
+confection==0.1.5
+wasabi==1.1.3
+langcodes==3.5.0
+
+# spaCy + SciSpaCy models
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+en_core_sci_sm @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz
+en_ner_bc5cdr_md @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+
+# PDF / text handling
+pdfplumber==0.11.0
+PyPDF2==3.0.1
+pypdfium2==4.30.0
+PyMuPDF==1.26.4
+fpdf==1.7.2
+
+# LangChain + Groq
+langchain==0.3.27
+langchain-core==0.3.75
+langchain-groq==0.3.7
+langchain-text-splitters==0.3.9
+groq==0.31.0
+
+# Other useful libs
+nltk==3.9.1
+joblib==1.5.1
+tqdm==4.66.5
+requests==2.32.5
+python-dotenv==1.1.1
