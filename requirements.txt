@@ -13,7 +13,7 @@ plotly>=6.0.0
 
 # SpaCy models
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz
-https://github.com/medspacy/en_ner_bc5cdr_md/releases/download/v0.1.0/en_ner_bc5cdr_md-0.1.0.tar.gz
+https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
 
 
 
