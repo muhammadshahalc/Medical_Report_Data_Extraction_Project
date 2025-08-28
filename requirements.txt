@@ -1,7 +1,7 @@
 streamlit>=1.25.0
 pandas>=2.1.0
 python-dotenv>=1.0.0
-spacy>=3.6.0
+spacy==3.7.4  #works with Python 3.12
 scikit-learn>=1.3.0
 pdfplumber>=0.10.0
 pytesseract>=0.3.10
@@ -11,63 +11,11 @@ langchain-groq>=0.0.1
 altair>=5.0.0
 plotly>=6.0.0
 
-# SpaCy models
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz
 https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
 
-
-# Pre-compiled dependencies
-blis==0.7.9
-thinc==8.1.10
-cython==0.29.36
-numpy==1.24.3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+blis>=0.7.10
+thinc>=8.1.12
+cython>=0.29.36
+numpy>=1.24.0
+scispacy==0.5.4  # For the medical NER model
