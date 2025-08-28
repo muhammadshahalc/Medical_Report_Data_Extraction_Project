@@ -1,0 +1,10 @@
+python3-distutils
+libjpeg-dev
+libpng-dev
+libtiff-dev
+libopenblas-dev
+g++
+gcc
+make
+build-essential
+python3-dev
