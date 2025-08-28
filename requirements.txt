@@ -10,7 +10,7 @@ scikit-learn==1.5.1
 # NLP and spaCy ecosystem
 spacy==3.7.5
 scispacy==0.5.5
-blis==0.7.11 --only-binary :all:
+blis==0.7.11 
 thinc==8.2.5
 srsly==2.5.1
 cymem==2.0.11
@@ -31,7 +31,7 @@ pdfplumber==0.11.0
 PyPDF2==3.0.1
 pypdfium2==4.30.0
 PyMuPDF==1.26.4
-fpdf==1.7.2
+fpdf2==2.7.9   # updated version for streamlit
 
 # LangChain + Groq
 langchain==0.3.27
