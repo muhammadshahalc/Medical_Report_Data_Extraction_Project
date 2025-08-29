@@ -7,14 +7,6 @@ The system uses **PDF text extraction**, **OCR for image-based PDFs**, **NER for
 
 ---
 
-## Live Demo
-
-Check out the working app on Streamlit Cloud:
-[🌐 Medical Report Data Extraction App](https://med-data-extract-app.streamlit.app/)
-
-
----
-
 [📂 View Working Demo Video](data/demo.mp4)
 ---
 ## Approach Taken
